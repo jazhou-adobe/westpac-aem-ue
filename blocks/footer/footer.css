@@ -1,7 +1,8 @@
 footer {
   padding: 2rem;
-  background-color: var(--light-color);
+  background-color: var(--background-color);
   font-size: var(--body-font-size-s);
+  border-top: 10px solid #da1710;
 }
 
 footer .footer {

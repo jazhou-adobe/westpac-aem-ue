@@ -86,8 +86,6 @@ h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
   scroll-margin: calc(var(--nav-height) + 1em);
   color: #1f1c4f;
 }
@@ -237,9 +235,14 @@ main .section.highlight {
 
 main .section.highlight > div.default-content-wrapper {
   background-color: white;
-  padding: 50px;
+  padding: 20px 0px 20px 50px;
 }
 
 .cb-align {
   text-align:center;
+}
+
+.section.why-westpac img {
+  width:48px;
+  height:48px;
 }

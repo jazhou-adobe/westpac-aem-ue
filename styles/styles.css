@@ -13,7 +13,7 @@
 :root {
   /* colors */
   --link-color: #da1710;
-  --link-hover-color: #d7312c;
+  --link-hover-color: #d34742;
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
@@ -92,11 +92,11 @@ h6 {
   color: #1f1c4f;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
+h1 { font-size: var(--heading-font-size-xl); }
+h2 { font-size: var(--heading-font-size-l); }
+h3 { font-size: var(--heading-font-size-m); }
+h4 { font-size: var(--heading-font-size-s); }
+h5 { font-size: var(--heading-font-size-xs); }
 h6 { font-size: var(--heading-font-size-xs); }
 
 p,
@@ -133,8 +133,8 @@ main pre {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
+  color: var(--text-color);
+  text-decoration: underline;
 }
 
 a:hover {
@@ -149,11 +149,11 @@ button {
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   padding: 8px 12px;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
@@ -181,8 +181,17 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: unset;
-  border: 2px solid currentcolor;
+  border: 1px solid var(--link-color);
   color: var(--text-color);
+}
+
+a.button.secondary:hover,
+a.button.secondary:focus,
+button.secondary:hover,
+button.secondary:focus {
+  background-color: var(--link-hover-color);
+  color: white;
+  cursor: pointer;
 }
 
 main img {
@@ -224,4 +233,8 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+.cb-align {
+  text-align:center;
 }

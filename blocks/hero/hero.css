@@ -4,32 +4,46 @@ main .hero-container > div {
 
 main .hero-container {
   padding: 0;
+  background-color: #f3f4f6;
+  height: 342px;
 }
 
 .hero {
   position: relative;
   padding: 32px;
+  padding-left: 100px;
   min-height: 300px;
 }
 
 .hero h1 {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
+  text-transform: uppercase;
+}
+
+.hero h2 {
   text-transform: uppercase;
 }
 
 .hero picture {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;
+  left: 750px;
+  height: 342px;
+  border-right: 20px solid #da1710;
 }
 
 .hero img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.hero > div:nth-child(2) {
+  position: relative;
+  width: 50%;
+  min-height: 18rem;
+  margin-top: -20px;
 }

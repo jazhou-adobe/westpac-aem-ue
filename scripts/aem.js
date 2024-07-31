@@ -706,18 +706,6 @@ function decorateBlocks(main) {
 }
 
 /**
- * Loads a block named 'headertop' into header
- * @param {Element} header header element
- * @returns {Promise}
- */
-async function loadHeaderTop(header) {
-  const headerTopBlock = buildBlock('headertop', '');
-  header.append(headerTopBlock);
-  decorateBlock(headerTopBlock);
-  return loadBlock(headerTopBlock);
-}
-
-/**
  * Loads a block named 'header' into header
  * @param {Element} header header element
  * @returns {Promise}

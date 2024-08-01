@@ -425,6 +425,18 @@ function wrapTextNodes(block) {
 }
 
 /**
+ * Decorates links
+ * @param {Element} element container element
+ */
+function decorateLinks(element) {
+  element.querySelectorAll('ul').forEach(ul => {
+    if (ul.querySelector('li>a') && !ul.classList.contains('has-links')) {
+        ul.classList.add('has-links');
+    }
+});
+}
+
+/**
  * Decorates paragraphs containing a single link as buttons.
  * @param {Element} element container element
  */
@@ -492,6 +504,7 @@ function decorateButtons(element) {
       }
     }
   });
+
 }
 
 /**
@@ -726,6 +739,7 @@ function decorateBlock(block) {
     if (section) section.classList.add(`${shortBlockName}-container`);
     // eslint-disable-next-line no-use-before-define
     decorateButtons(block);
+    decorateLinks(block);
   }
 }
 
@@ -811,4 +825,5 @@ export {
   updateSectionsStatus,
   waitForLCP,
   wrapTextNodes,
+  decorateLinks
 };

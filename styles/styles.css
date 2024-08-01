@@ -12,8 +12,10 @@
 
 :root {
   /* colors */
-  --link-color: #da1710;
-  --link-hover-color: #d34742;
+  --link-color: #000000;
+  --link-hover-color: #000000;
+  --button-color: #da1710;
+  --button-hover-color: #d34742;
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
@@ -131,13 +133,13 @@ main pre {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
+  color: var(--button-color);
   text-decoration: underline;
 }
 
 a:hover {
   text-decoration: underline;
-  color: var(--link-hover-color);
+  color: var(--button-hover-color);
 }
 
 /* buttons */
@@ -154,7 +156,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   color: var(--background-color);
-  background-color: var(--link-color);
+  background-color: var(--button-color);
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -166,7 +168,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--button-hover-color);
   cursor: pointer;
 }
 
@@ -179,7 +181,7 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: unset;
-  border: 1px solid var(--link-color);
+  border: 1px solid var(--button-color);
   color: var(--text-color);
 }
 
@@ -187,7 +189,7 @@ a.button.secondary:hover,
 a.button.secondary:focus,
 button.secondary:hover,
 button.secondary:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--button-hover-color);
   color: white;
   cursor: pointer;
 }
@@ -245,4 +247,33 @@ main .section.highlight > div.default-content-wrapper {
 .section.why-westpac img {
   width:48px;
   height:48px;
+}
+
+ul.has-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.has-links li {
+  display: flex;
+}
+
+ul.has-links li a {
+  display: flex;
+}
+
+ul.has-links li a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+ul.has-links li a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+
+ul.has-links li::before {
+  /*content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L11.293 8 6.646 3.354a.5.5 0 0 1 0-.708z"/></svg>');*/
+  content: url('data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20aria-labelledby%3D%22title-icon-linklist%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%20%20%3Ctitle%20id%3D%22title-icon-linklist%22%20lang%3D%22en%22%3ELink%3C%2Ftitle%3E%20%20%3Cpolygon%20fill%3D%22%23da1710%22%20class%3D%22icons-background%22%20fill-rule%3D%22evenodd%22%20points%3D%2214.588%2012%208%2018.588%209.412%2020%2017.412%2012%209.412%204%208%205.412%22%2F%3E%3C%2Fsvg%3E');
+  margin-right: 8px; /* Adjust space between the icon and the text */
 }

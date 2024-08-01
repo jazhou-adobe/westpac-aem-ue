@@ -28,8 +28,9 @@
 
 @font-face {
   font-family: 'Westpac LH-v2.003';
-  src: url('WestpacLH-v2003-Bold.woff2') format('woff2'),
-      url('WestpacLH-v2003-Bold.woff') format('woff');
+  src: url('../fonts/WestpacLH-v2003-Bold.woff2') format('woff2'),
+      url('../fonts/WestpacLH-v2003-Bold.woff') format('woff'),
+      url('../fonts/WestpacLH-v2003-Bold.otf') format('otf');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
